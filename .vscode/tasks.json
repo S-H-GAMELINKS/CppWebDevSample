@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmd",
+            "args": ["/C", "docker rmi cpp-web-dev && docker build -t cpp-web-dev . && docker run --rm --name cpp-web-dev -i -p 3000:3000 -t cpp-web-dev"],
+        }
+    ]
+}
