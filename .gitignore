@@ -3,3 +3,4 @@ a.exe
 a.out
 httplib.h
 static/node_modules
+static/index.js
