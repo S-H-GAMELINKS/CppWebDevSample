@@ -24,9 +24,16 @@ int main(){
 
     const std::string static_html = load_static("./static/index.html");
 
+    const std::string static_javascript = load_static("./static/index.js");
+
     svr.Get("/", [&](const httplib::Request& req, httplib::Response& res){
         std::cout << "GET: routes '/'" << std::endl;
         res.set_content(static_html.c_str(), "text/html");
+    });
+
+    svr.Get("/index.js", [&](const httplib::Request& req, httplib::Response& res){
+        std::cout << "GET: routes '/index.js'" << std::endl;
+        res.set_content(static_javascript.c_str(), "text/javascript");
     });
 
     svr.listen("0.0.0.0", 3000);
