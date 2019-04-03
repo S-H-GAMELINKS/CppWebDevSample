@@ -43,6 +43,15 @@ int main(){
         res.set_content(static_javascript.c_str(), "text/javascript");
     });
 
+    svr.Get("/api/talks", [&](const httplib::Request& req, httplib::Response& res) {
+        std::ostringstream content;
+
+        for(auto&& t: talks)
+            content << "<p>" << t.c_str() << "</p>";
+
+        res.set_content(content.str(), "text/plain");
+    });
+
     svr.Post("/api/talks", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             talks.emplace_back(std::move(req.body));
