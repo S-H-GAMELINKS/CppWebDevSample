@@ -1,5 +1,5 @@
 <template>
-    <div class="container" data-controller="room" data-chat-url="/api/talks" data-chat-refresh-interval="100">
+    <div class="container" data-controller="room" data-chat-url="/api/rooms" data-chat-refresh-interval="100">
         <h1>All Chat Room's</h1>
         <div class="input-group">
             <div class="input-group-append">
