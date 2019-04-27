@@ -5,7 +5,7 @@
             "label": "build",
             "type": "shell",
             "command": "cmd",
-            "args": ["/C", "docker rmi cpp-web-dev && docker build -t cpp-web-dev . && docker run --rm --name cpp-web-dev -i -p 3000:3000 -t cpp-web-dev"],
+            "args": ["/C", "docker rmi cpp-web-dev && docker build -t cpp-web-dev . && docker run --rm --name cpp-web-dev -i -p 8080:8080 -t cpp-web-dev"],
         }
     ]
 }

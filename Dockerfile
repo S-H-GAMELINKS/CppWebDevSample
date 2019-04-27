@@ -1,6 +1,6 @@
 FROM gcc:latest
 COPY . /cpp-dev
 WORKDIR /cpp-dev
-EXPOSE 3000
+EXPOSE 8080
 RUN g++ main.cpp httplib.h -std=c++17 -pthread 
 CMD ["./a.out"]
