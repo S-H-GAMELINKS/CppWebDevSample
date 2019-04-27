@@ -1,0 +1,3 @@
+entrypoint: ./a.out
+env: flex
+runtime: custom
